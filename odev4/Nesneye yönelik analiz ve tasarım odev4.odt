@@ -1,0 +1,149 @@
+﻿					Operational Contracts
+	CO1:biletSatışBaşlat
+	operation: biletSatışBaşlat()
+              scope: Use case – Bilet Satış
+ 	precondition: none
+	postcondition:
+                    - bsatis isminde bilet satış nesnesi oluşturulmuş olmalı.
+	      - bsatıis nesnesi kayitçi ile ilişkilendirilmiş olmalı.
+	      - bsatis nesnesinin özellikleri başlatılmış olmalıdır.
+   	
+	CO2:ara
+	operation: ara(başlangıç, bitiş, tarih, saat)
+	scope: Use case – Bilet Satış
+ 	precondition: Bilet Satış nesnesi yaratılmış olmalı.
+	Postcondition:
+	      - uc isminde uçuş nesnesi başlangıç, bitiş, tarih ve saatten sistemde çekilmiş olmalı.
+	      - uc nesnesinin özellikleri başlatılmış olmalıdır.
+	 
+              CO3:bilgiAl
+	operation: bilgiAl(koltukSınıfı, tcKimlik, ad, soyad)
+	scope: Use case – Bilet Satış
+ 	precondition: Uçuş nesnesi sistemde çekilmiş olmalı.
+	Postcondition:
+	      - koltukSınıfına göre koltuks isimli KoltukSınıfı nesnesi yaratılmış olmalı.
+	      - mus isminde müşteri nesnesi oluşturulmalı, tcKimlik, ad, soyad özellikleri set edilmiş olmalıdır.
+	      - bil isminde bilet nesnesi oluşturulur.
+	      - bil nesnesi ile uc nesnesi ve müşteri nesnesi ilişkilendirilir.
+	      - koltuks nesnesi ile bil nesnesi ilişkilendirilmelidir.
+                    - bil nesnesi ile bsatis nesnesi ilişkilendirilmelidir.
+
+	CO4:odeme
+	operation: odeme(miktar)
+	scope: Use case – Bilet Satış
+ 	precondition: Bilet nesnesi yaratılmış olmalıdır.
+	Postcondition:
+	       - nodeme isminde NakitOdeme nesnesi oluşturulmalıdır ve miktar özelliği miktar ile set edilmelidir.
+	       - nodeme nesnesi batis nesnesi ile ilişkilendirilmelidir.
+
+
+
+
+
+
+
+
+
+
+
+
+         
+
+
+
+
+
+	CO6:checkinİşlemiBaşlat
+	operation: checkinBaşlat
+	scope: Use case – Check In
+ 	precondition: none
+	Postcondition:
+	        - ci isminde checkinİşlemi nesnesi yaratılmış olmalıdır.
+	        - ci kayıtçı nesnesi ile ilişkilendirilmiş olmalıdır.
+ 	        - ci nin özellikleri başlatılmalıdır.
+
+	CO7:doğrula
+	operation: doğrula(biletId, tcKimlikNo)
+	scope: Use case – Check In
+ 	precondition: checkinİşlemi nesnesi yaratılmış olmalıdır.
+	Postcondition:
+	        - biletId özelliğine sahip b isminde ki bilet nesnesine ile tcKimlikNo özelliğine sahip mus ismindeki Müşteri nesnesi sistemden çekilir.
+
+	CO8:koltukSeç
+	operation: koltukSeç(koltukNo)
+	scope: Use case – Check In
+ 	precondition: Bilet nesnesi yaratılmış olmalıdır.
+	Postcondition: 
+	        - Biletin koltuk sınıfına göre koltuk isimli nesne Koltuk sınıfından oluşturulur ve koltuk numarası koltukNo ile set edilir.
+	        - koltuk müşteri ile ilişkilendirilir
+                      - koltuk ci nesnesi ile ilişkilendirilir.
+	 
+
+	CO9:bagajBilgisiAl
+	operation: koltukSeç(ağırlık)
+	scope: Use case – Check In
+ 	precondition: b ismindeki bilet nesnesi sistemden çeklmiş olmalı.
+	Postcondition: 
+	        - bag isimli nesne Bagaj sınıfından türetilmeli. Ağırlık özelliği ağırlık ile set edilmelidir.
+	        - bag nesnesi müşteri ile ilişkilendirilmelidir.
+                      - bf nesnesi BagajFişi sınıfından türetilmelidir.  Bf nesnesi bagaj ve checkin işlemiile ilişkilendirilmelidir.
+	        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            CO10:uçuşEkleBaşlat
+	operation: uçuşEkleBaşlat()
+	scope: Use case – Uçuş Ekle
+ 	precondition: none
+	Postcondition: 
+	         - ue isimli nesne UçuşEkle sınıfından türetilmelidir.
+	          - ue nesnesi kayıtçı ile ilişkilendirilmelidir.
+	          - ue nesnesinin özellikeri başlatılmalıdır.
+           CO11:seferAra
+	operation: seferAra(kalkis, varis)
+	scope: Use case – Uçuş Ekle
+ 	precondition: Uçuş ekle sınıfının nesnesi yaratılmış olmalıdır.
+	Postcondition: 
+	         - sistemde sefer isimli nesne kalkis ve varis noktasina göre SeferKataloğundan çekilmelidir.
+
+           CO11:seferAra
+	operation: seferAra(kalkisLimanıId, varisLimanıId)
+	scope: Use case – Uçuş Ekle
+ 	precondition: Uçuş ekle sınıfının nesnesi yaratılmış olmalıdır.
+	Postcondition: 
+kh isimli nesne HavalimanıKataloğunda kalkisLimanıId ile çekilir.
+vh isimli nesne HavalimanıKataloğunda varisLimanıId ile çekilir.	         
+sistemde sefer isimli nesne kh ve vh nesnelerine göre SeferKataloğundan çekilmelidir.	          
+
+           CO11:uçakSeç
+	operation: uçakSeç(uçakId)
+	scope: Use case – Uçuş Ekle
+ 	precondition: Sefer nesnesi yaratılmış olmalıdır.
+	Postcondition: 
+	         - yu isimli yolcu uçağı nesnesi UçakKataloğundan id ile çekilir.
+
+           CO11: uçuşBilgisiGir
+	operation: uçuşBilgisiGir(personelIdleri, saat, tarih)
+	scope: Use case – Uçuş Ekle
+ 	precondition: Uçak nesnesi ve sefer nesnesi yaratılmış olmalıdır.
+	Postcondition: 
+	          - personeller sistemden PersonelKataloğundan idleri ile çekilirler.
+	         - uçuş nesnesi saat ve tarih bilgileriyle Uçuş sınıfından türetilir.
+	          - personeller, yu, sefer uçuş ile ilişkilendirilir.
+	          - ue ile uçuş nesnesi ilişkilendirilmelidir.
+	          
+	
