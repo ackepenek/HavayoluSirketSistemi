@@ -1,6 +1,8 @@
 package DomainPackage;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Ucus {
 	private int ucusId;
@@ -11,6 +13,10 @@ public class Ucus {
 	private Date ucusTarihi;
 	
 	
+	private List<Koltuk> koltukListesi = new ArrayList<Koltuk>();
+
+	
+	
 	public Ucus(int ucusID) {
 		this.ucusId = ucusID;
 	}
@@ -19,6 +25,13 @@ public class Ucus {
 		
 	}
 
+	public List<Koltuk> getKoltukListesi() {
+		return koltukListesi;
+	}
+
+	public void setKoltukListesi(List<Koltuk> koltukListesi) {
+		this.koltukListesi = koltukListesi;
+	}
 	
 	
 	public Date getUcusTarihi() {
