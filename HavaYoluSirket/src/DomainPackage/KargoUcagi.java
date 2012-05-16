@@ -12,7 +12,7 @@ public class KargoUcagi extends Ucak {
 	}
 	
 	public void ucakBilgiGir(float kargoKapasitesi,String ucakAdi,int ucakID,float agirlik){
-		setUcakId(ucakID);
+		setUcakID(ucakID);
 		setKargoKapasitesi(kargoKapasitesi);
 		setAgirlik(agirlik);
 		setUcakAdi(ucakAdi);
