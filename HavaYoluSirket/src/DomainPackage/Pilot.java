@@ -1,5 +1,7 @@
 package DomainPackage;
 
-public class UcakKatalog {
 
+
+public class Pilot {
+	
 }
