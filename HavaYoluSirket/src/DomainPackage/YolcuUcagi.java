@@ -5,9 +5,8 @@ import java.util.List;
 
 public class YolcuUcagi extends Ucak{
 
-<<<<<<< HEAD
-	private 
-=======
+	private List<Koltuk> koltukListesi = new ArrayList<Koltuk>();
+	
 	public List<Koltuk> getKoltukListesi() {
 		return koltukListesi;
 	}
@@ -86,5 +85,5 @@ public class YolcuUcagi extends Ucak{
 		return ekonomikKoltuk;
 	}
 	
->>>>>>> 0a3725e7479b7ff337ce8786be42db58db160399
+
 }

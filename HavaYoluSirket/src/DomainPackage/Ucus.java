@@ -11,17 +11,10 @@ public class Ucus {
 	private Pilot pilot;
 	private Hostes hostes;
 	private Date ucusTarihi;
-<<<<<<< HEAD
-	
-	
-	private List<Koltuk> koltukListesi = new ArrayList<Koltuk>();
 
-	
-	
-=======
 	private List<Koltuk> koltuklar = new ArrayList<Koltuk>();
 
->>>>>>> 0a3725e7479b7ff337ce8786be42db58db160399
+
 	public Ucus(int ucusID) {
 		this.ucusId = ucusID;
 	}
@@ -50,18 +43,8 @@ public class Ucus {
 
 	}
 
-<<<<<<< HEAD
-	public List<Koltuk> getKoltukListesi() {
-		return koltukListesi;
-	}
 
-	public void setKoltukListesi(List<Koltuk> koltukListesi) {
-		this.koltukListesi = koltukListesi;
-	}
-	
-	
-=======
->>>>>>> 0a3725e7479b7ff337ce8786be42db58db160399
+
 	public Date getUcusTarihi() {
 		return ucusTarihi;
 	}
