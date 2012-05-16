@@ -22,8 +22,8 @@ public class DataConnector {
     private String POSTGRESQL_PORT="5432";
     private String POSTGRESQL_IP="localhost";
     private String POSTGRESQL_DATABASE_NAME="ayo";
-    private String POSTGRESQL_USERNAME="postgres";
-    private String POSTGRESQL_PASSWORD="";
+    private String POSTGRESQL_USERNAME="serhat";
+    private String POSTGRESQL_PASSWORD="serhat";
     
     
     private DataConnector(){
@@ -42,7 +42,7 @@ public class DataConnector {
                     Class.forName("org.postgresql.Driver");
                     connection = DriverManager.getConnection(("jdbc:postgresql://"+POSTGRESQL_IP+":"+POSTGRESQL_PORT+"/"+POSTGRESQL_DATABASE_NAME), POSTGRESQL_USERNAME, POSTGRESQL_PASSWORD);
                     stmt = connection.createStatement();
-                    
+                    System.out.println("Veritabanı ile bağlantı kuruldu");
                     return true;
             }
             catch(Exception e){
