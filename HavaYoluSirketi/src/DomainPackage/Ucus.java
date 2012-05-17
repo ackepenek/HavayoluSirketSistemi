@@ -5,117 +5,141 @@ import java.util.Date;
 import java.util.List;
 
 public class Ucus {
-	private int ucusId;
-	private YolcuUcagi ucak;
-	private Sefer sefer;
-	private Pilot pilot;
-	private Hostes hostes;
-	private Date ucusTarihi;
 
-	private List<Koltuk> koltuklar = new ArrayList<Koltuk>();
+    private int ucusId;
+    private YolcuUcagi ucak;
+    private Sefer sefer;
+    private Pilot pilot;
+    private Hostes hostes;
+    private String saat;
+    private String tarih;
+    private float businessKoltukFiyati;
+    private float ekonomikKoltukFiyati;
 
+    public float getBusinessKoltukFiyati() {
+        return businessKoltukFiyati;
+    }
 
-	public Ucus(int ucusID) {
-		this.ucusId = ucusID;
-	}
+    public void setBusinessKoltukFiyati(float businessKoltukFiyati) {
+        this.businessKoltukFiyati = businessKoltukFiyati;
+    }
 
-	public Ucus() {
+    public float getEkonomikKoltukFiyati() {
+        return ekonomikKoltukFiyati;
+    }
 
-	}
+    public void setEkonomikKoltukFiyati(float ekonomikKoltukFiyati) {
+        this.ekonomikKoltukFiyati = ekonomikKoltukFiyati;
+    }
+    
+    
+    public String getSaat() {
+        return saat;
+    }
 
-	public List<Float> getFiyatList() {
-		List<Float> fiyatList = new ArrayList<Float>();
-		for (Koltuk k : koltuklar) {
-			if (k.getClass().getName() == "DomainPackage.UcusEkonomikKoltuk") {
-				fiyatList.add(k.getFiyat());
-				break;
-			}
-		}
+    public void setSaat(String saat) {
+        this.saat = saat;
+    }
 
-		for (Koltuk k : koltuklar) {
-			if (k.getClass().getName() == "DomainPackage.UcusBusinessKoltuk") {
-				fiyatList.add(k.getFiyat());
-				break;
-			}
-		}
+    public String getTarih() {
+        return tarih;
+    }
 
-		return fiyatList;
+    public void setTarih(String tarih) {
+        this.tarih = tarih;
+    }
+    private List<Koltuk> koltuklar = new ArrayList<Koltuk>();
 
-	}
+    public Ucus(int ucusID) {
+        this.ucusId = ucusID;
+    }
 
+    public Ucus() {
+    }
 
+    public List<Float> getFiyatList() {
+        List<Float> fiyatList = new ArrayList<Float>();
+        for (Koltuk k : koltuklar) {
+            if (k.getClass().getName() == "DomainPackage.UcusEkonomikKoltuk") {
+                fiyatList.add(k.getFiyat());
+                break;
+            }
+        }
 
-	public Date getUcusTarihi() {
-		return ucusTarihi;
-	}
+        for (Koltuk k : koltuklar) {
+            if (k.getClass().getName() == "DomainPackage.UcusBusinessKoltuk") {
+                fiyatList.add(k.getFiyat());
+                break;
+            }
+        }
 
-	public void setUcusTarihi(Date ucusTarihi) {
-		this.ucusTarihi = ucusTarihi;
-	}
+        return fiyatList;
 
-	public int getUcusId() {
-		return ucusId;
-	}
+    }
 
-	public void setUcusId(int ucusId) {
-		this.ucusId = ucusId;
-	}
+    public int getUcusId() {
+        return ucusId;
+    }
 
-	public YolcuUcagi getUcak() {
-		return ucak;
-	}
+    public void setUcusId(int ucusId) {
+        this.ucusId = ucusId;
+    }
 
-	public void setUcak(YolcuUcagi ucak) {
-		this.ucak = ucak;
-		for (Koltuk k : ucak.getKoltukListesi()) {
-			if (k.getClass().getName() == "DomainPackage.BusinessKoltuk") {
-				BusinessKoltuk ubk = new BusinessKoltuk();
-				ubk.setKoltukNo(k.getKoltukNo());
-				this.koltuklar.add(ubk);
-			} else if (k.getClass().getName() == "DomainPackage.EkonomikKoltuk") {
-				EkonomikKoltuk uek = new EkonomikKoltuk();
-				uek.setKoltukNo(k.getKoltukNo());
-				this.koltuklar.add(uek);
-			}
-		}
-	}
+    public YolcuUcagi getUcak() {
+        return ucak;
+    }
 
-	public List<Koltuk> getKoltuklar() {
-		return koltuklar;
-	}
+    public void setUcak(YolcuUcagi ucak) {
+        this.ucak = ucak;
+        for (Koltuk k : ucak.getKoltukListesi()) {
+            if (k.getClass().getName() == "DomainPackage.BusinessKoltuk") {
+                BusinessKoltuk ubk = new BusinessKoltuk();
+                ubk.setKoltukNo(k.getKoltukNo());
+                this.koltuklar.add(ubk);
+            } else if (k.getClass().getName() == "DomainPackage.EkonomikKoltuk") {
+                EkonomikKoltuk uek = new EkonomikKoltuk();
+                uek.setKoltukNo(k.getKoltukNo());
+                this.koltuklar.add(uek);
+            }
+        }
+    }
 
-	public List<Koltuk> getUygunKoltuklar() {
-		List<Koltuk> koltukListesi = new ArrayList<Koltuk>();
-		for (Koltuk i : getKoltuklar())
-			if (!i.isDoluMu())
-				koltukListesi.add(i);
+    public List<Koltuk> getKoltuklar() {
+        return koltuklar;
+    }
 
-		return koltukListesi;
-	}
-	
-	
-	public Sefer getSefer() {
-		return sefer;
-	}
+    public List<Koltuk> getUygunKoltuklar() {
+        List<Koltuk> koltukListesi = new ArrayList<Koltuk>();
+        for (Koltuk i : getKoltuklar()) {
+            if (!i.isDoluMu()) {
+                koltukListesi.add(i);
+            }
+        }
 
-	public void setSefer(Sefer sefer) {
-		this.sefer = sefer;
-	}
+        return koltukListesi;
+    }
 
-	public Pilot getPilot() {
-		return pilot;
-	}
+    public Sefer getSefer() {
+        return sefer;
+    }
 
-	public void setPilot(Pilot pilot) {
-		this.pilot = pilot;
-	}
+    public void setSefer(Sefer sefer) {
+        this.sefer = sefer;
+    }
 
-	public Hostes getHostes() {
-		return hostes;
-	}
+    public Pilot getPilot() {
+        return pilot;
+    }
 
-	public void setHostes(Hostes hostes) {
-		this.hostes = hostes;
-	}
+    public void setPilot(Pilot pilot) {
+        this.pilot = pilot;
+    }
 
+    public Hostes getHostes() {
+        return hostes;
+    }
+
+    public void setHostes(Hostes hostes) {
+        this.hostes = hostes;
+    }
 }

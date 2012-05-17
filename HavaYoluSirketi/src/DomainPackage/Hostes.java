@@ -2,7 +2,7 @@ package DomainPackage;
 
 import java.util.Date;
 
-public class Hostes {
+public class Hostes extends Personel{
 
 
 }
