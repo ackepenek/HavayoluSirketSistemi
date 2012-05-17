@@ -78,7 +78,7 @@ public class DataConnector {
     public static void main(String[] args){
     	
     	DataConnector d = new DataConnector();
-    	d.startConnection();
+//    	d.startConnection();
 	
     }
 	
