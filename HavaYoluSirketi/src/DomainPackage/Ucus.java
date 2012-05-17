@@ -15,7 +15,10 @@ public class Ucus {
     private String tarih;
     private float businessKoltukFiyati;
     private float ekonomikKoltukFiyati;
-
+    
+    private float bosBusinessKoltukFiyati;
+    private float bosEkonomikKoltukFiyati;
+    
     public float getBusinessKoltukFiyati() {
         return businessKoltukFiyati;
     }
