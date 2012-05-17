@@ -2,6 +2,6 @@ package DomainPackage;
 
 
 
-public class Pilot {
+public class Pilot extends Personel{
 	
 }

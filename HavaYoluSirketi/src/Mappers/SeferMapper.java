@@ -1,29 +1,49 @@
 package Mappers;
 
+import DomainPackage.HavaLimani;
+import DomainPackage.Sefer;
 import java.sql.ResultSet;
 
 import TechnicalServices.AbstractDBMapper;
 import TechnicalServices.IMapper;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
+public class SeferMapper extends AbstractDBMapper {
 
-public class SeferMapper extends AbstractDBMapper{
+    public SeferMapper(String tableName) {
+        super(tableName);
+        // TODO Auto-generated constructor stub
+    }
 
-	public SeferMapper(String tableName) {
-		super(tableName);
-		// TODO Auto-generated constructor stub
-	}
+    @Override
+    protected Object getObjectFromResult(int ID, ResultSet rs) {
+        try {
+            rs.next();
+            Sefer sefer = new Sefer();
+            sefer.setSeferID(ID);
 
-	@Override
-	protected Object getObjectFromResult(int ID, ResultSet rs) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+            HavaLimani kalkis = (HavaLimani) new HavaLimaniMapper("havalimani").get(Integer.parseInt(rs.getString(2)));
+            sefer.setKalkisHavalimani(kalkis);
 
-	@Override
-	protected String buildObjectUpdateQuery(Object object) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
+            HavaLimani inis = (HavaLimani) new HavaLimaniMapper("havalimani").get(Integer.parseInt(rs.getString(3)));
+            sefer.setInisHavalimani(inis);
 
+            return sefer;
+
+        } catch (SQLException ex) {
+            Logger.getLogger(SeferMapper.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+
+    @Override
+    protected String buildObjectUpdateQuery(Object object) {
+        Sefer sefer = (Sefer)object;
+        String query="insert into sefer values(NULL," + 
+                "'" + sefer.getKalkisHavalimani().getHavaLimaniId() + "'," +
+                "'" + sefer.getInisHavalimani().getHavaLimaniId() + "')" ;
+        return query;
+    }
 }

@@ -6,7 +6,7 @@ import javax.naming.spi.DirStateFactory.Result;
 
 public abstract class AbstractDBMapper extends AbstractPersistenceMapper{
 	
-	private String tableName;
+	protected String tableName;
 	
 	public AbstractDBMapper(String tableName){
 		this.tableName = tableName;
