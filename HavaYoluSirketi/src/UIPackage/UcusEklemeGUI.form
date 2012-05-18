@@ -17,120 +17,146 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,-16,0,0,2,65"/>
   </AuxValues>
 
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="207" max="-2" attributes="0"/>
-              <Component id="ucakLabel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace min="143" pref="143" max="-2" attributes="0"/>
+              <Component id="ucusEkleLabel" min="-2" max="-2" attributes="0"/>
           </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace min="73" pref="73" max="-2" attributes="0"/>
+              <Component id="ucakIdLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="190" pref="190" max="-2" attributes="0"/>
+              <Component id="seferIdLabel" min="-2" pref="70" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="64" pref="64" max="-2" attributes="0"/>
+              <Component id="ucakIdCombo" min="-2" pref="131" max="-2" attributes="0"/>
+              <EmptySpace min="105" pref="105" max="-2" attributes="0"/>
+              <Component id="seferIdText" min="-2" pref="77" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="122" pref="122" max="-2" attributes="0"/>
+              <Component id="pilotLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="171" pref="171" max="-2" attributes="0"/>
+              <Component id="hostesLabel" min="-2" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="70" pref="70" max="-2" attributes="0"/>
+              <Component id="pilotCombo" min="-2" pref="139" max="-2" attributes="0"/>
+              <EmptySpace min="91" pref="91" max="-2" attributes="0"/>
+              <Component id="hostesCombo" min="-2" pref="96" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="51" pref="51" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="ucusEkleLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="kalkisHavaLimanıCombo" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="250" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="pilotCombo" max="32767" attributes="0"/>
-                              <Component id="kalkisHavaLimanıLabel" alignment="1" max="32767" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                  <Component id="pilotLabel" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="ucusEkleTarih" min="-2" pref="161" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="hostesCombo" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="inisHavalimanıCombo" max="32767" attributes="0"/>
-                                          <Component id="inisHavaLimanıCombo" max="32767" attributes="0"/>
-                                          <Component id="hostesCOmbo" alignment="0" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Component id="saatText" alignment="0" min="-2" pref="116" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="47" pref="47" max="-2" attributes="0"/>
                       <Component id="tarihLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
-                      <Component id="tarihLanbel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
                   </Group>
+                  <Component id="ucusEkleTarih" min="-2" pref="161" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
+                      <Component id="tarihLanbel" min="-2" pref="48" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="saatText" min="-2" pref="116" max="-2" attributes="0"/>
               </Group>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="195" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
+              <Component id="ucakLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="100" pref="100" max="-2" attributes="0"/>
+              <Component id="buisnessFiyatLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="59" pref="59" max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" pref="100" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="51" pref="51" max="-2" attributes="0"/>
               <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="82" max="32767" attributes="0"/>
-              <Component id="ucusEkleButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+              <EmptySpace min="110" pref="110" max="-2" attributes="0"/>
+              <Component id="buisnessFiyatText" min="-2" pref="44" max="-2" attributes="0"/>
+              <EmptySpace min="87" pref="87" max="-2" attributes="0"/>
+              <Component id="ekonomikFiyatText" min="-2" pref="86" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="304" pref="304" max="-2" attributes="0"/>
+              <Component id="ucusEkleButton" min="-2" pref="122" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
               <Component id="ucusEkleLabel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="kalkisHavaLimanıCombo" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="inisHavalimanıCombo" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="31" pref="31" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="ucakIdLabel" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                      <Component id="seferIdLabel" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="inisHavaLimanıCombo" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="kalkisHavaLimanıLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="ucakIdCombo" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                      <Component id="seferIdText" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="pilotLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="hostesCombo" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="41" pref="41" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="pilotLabel" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
+                      <Component id="hostesLabel" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="pilotCombo" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="hostesCOmbo" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="pilotCombo" min="-2" max="-2" attributes="0"/>
+                  <Component id="hostesCombo" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="tarihLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tarihLanbel" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="33" pref="33" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
+                      <Component id="tarihLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                      <Component id="ucusEkleTarih" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="tarihLanbel" min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                      <Component id="saatText" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="ucusEkleTarih" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="saatText" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="ucakLabel" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="buisnessFiyatLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace pref="32" max="32767" attributes="0"/>
-              <Component id="ucakLabel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="ucusEkleButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                  <Component id="buisnessFiyatText" min="-2" max="-2" attributes="0"/>
+                  <Component id="ekonomikFiyatText" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+              <EmptySpace min="41" pref="41" max="-2" attributes="0"/>
+              <Component id="ucusEkleButton" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -141,7 +167,7 @@
         <Property name="text" type="java.lang.String" value="L&#xfc;tfen U&#xe7;u&#x15f; Bilgilerini Ekleyiniz"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="kalkisHavaLiman&#x131;Label">
+    <Component class="javax.swing.JComboBox" name="ucakIdCombo">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -153,26 +179,9 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="inisHavaLiman&#x131;Combo">
+    <Component class="javax.swing.JLabel" name="ucakIdLabel">
       <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
-          </StringArray>
-        </Property>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="kalkisHavaLiman&#x131;Combo">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Kalk&#x131;&#x15f; Havaliman&#x131;"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="inisHavaliman&#x131;Combo">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="&#x130;ni&#x15f; Havaliman&#x131;"/>
+        <Property name="text" type="java.lang.String" value="Ucak Id"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="pilotLabel">
@@ -180,7 +189,7 @@
         <Property name="text" type="java.lang.String" value="Pilot"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="hostesCombo">
+    <Component class="javax.swing.JLabel" name="hostesLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Hostes"/>
       </Properties>
@@ -197,7 +206,7 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="hostesCOmbo">
+    <Component class="javax.swing.JComboBox" name="hostesCombo">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -243,6 +252,30 @@
     <Component class="javax.swing.JButton" name="ucusEkleButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="U&#xe7;u&#x15f; Kaydet"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ucusEkleButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="buisnessFiyatText">
+    </Component>
+    <Component class="javax.swing.JTextField" name="ekonomikFiyatText">
+    </Component>
+    <Component class="javax.swing.JLabel" name="buisnessFiyatLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Buisness Fiyat"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ekonomik Fiyat"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="seferIdText">
+    </Component>
+    <Component class="javax.swing.JLabel" name="seferIdLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Sefer Id"/>
       </Properties>
     </Component>
   </SubComponents>

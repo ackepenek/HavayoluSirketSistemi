@@ -87,6 +87,12 @@ public class GirisSayfasiGUI extends javax.swing.JPanel {
 
     private void sistemYoneticisiGirisButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sistemYoneticisiGirisButtonActionPerformed
         // TODO add your handling code here:
+   
+        parent.remove(this);
+       
+        UcusEklemeGUI ucusEkleGUI = new UcusEklemeGUI(parent);
+        parent.setPanel(ucusEkleGUI);
+        
     }//GEN-LAST:event_sistemYoneticisiGirisButtonActionPerformed
 
     private void satisElemaniGirisButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_satisElemaniGirisButtonActionPerformed

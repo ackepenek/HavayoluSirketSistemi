@@ -4,6 +4,8 @@
  */
 package UIPackage;
 
+import Controller.Register;
+
 /**
  *
  * @author ahmetcan
@@ -13,6 +15,7 @@ public class UcusEklemeGUI extends javax.swing.JFrame {
     /**
      * Creates new form UcusEklemeGUI
      */
+    private Register register;
     AnaSayfaGUI parent;
     public UcusEklemeGUI(AnaSayfaGUI parent) {
         initComponents();
@@ -29,14 +32,12 @@ public class UcusEklemeGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         ucusEkleLabel = new javax.swing.JLabel();
-        kalkisHavaLimanıLabel = new javax.swing.JComboBox();
-        inisHavaLimanıCombo = new javax.swing.JComboBox();
-        kalkisHavaLimanıCombo = new javax.swing.JLabel();
-        inisHavalimanıCombo = new javax.swing.JLabel();
+        ucakIdCombo = new javax.swing.JComboBox();
+        ucakIdLabel = new javax.swing.JLabel();
         pilotLabel = new javax.swing.JLabel();
-        hostesCombo = new javax.swing.JLabel();
+        hostesLabel = new javax.swing.JLabel();
         pilotCombo = new javax.swing.JComboBox();
-        hostesCOmbo = new javax.swing.JComboBox();
+        hostesCombo = new javax.swing.JComboBox();
         tarihLabel = new javax.swing.JLabel();
         tarihLanbel = new javax.swing.JLabel();
         ucusEkleTarih = new javax.swing.JTextField();
@@ -44,26 +45,28 @@ public class UcusEklemeGUI extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox();
         ucakLabel = new javax.swing.JLabel();
         ucusEkleButton = new javax.swing.JButton();
+        buisnessFiyatText = new javax.swing.JTextField();
+        ekonomikFiyatText = new javax.swing.JTextField();
+        buisnessFiyatLabel = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        seferIdText = new javax.swing.JTextField();
+        seferIdLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         ucusEkleLabel.setText("Lütfen Uçuş Bilgilerini Ekleyiniz");
 
-        kalkisHavaLimanıLabel.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ucakIdCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        inisHavaLimanıCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        kalkisHavaLimanıCombo.setText("Kalkış Havalimanı");
-
-        inisHavalimanıCombo.setText("İniş Havalimanı");
+        ucakIdLabel.setText("Ucak Id");
 
         pilotLabel.setText("Pilot");
 
-        hostesCombo.setText("Hostes");
+        hostesLabel.setText("Hostes");
 
         pilotCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        hostesCOmbo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        hostesCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         tarihLabel.setText("Tarih");
 
@@ -74,58 +77,75 @@ public class UcusEklemeGUI extends javax.swing.JFrame {
         ucakLabel.setText("Uçak");
 
         ucusEkleButton.setText("Uçuş Kaydet");
+        ucusEkleButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ucusEkleButtonActionPerformed(evt);
+            }
+        });
+
+        buisnessFiyatLabel.setText("Buisness Fiyat");
+
+        jLabel2.setText("Ekonomik Fiyat");
+
+        seferIdLabel.setText("Sefer Id");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(207, 207, 207)
-                .addComponent(ucakLabel)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(ucusEkleLabel)
-                                .addGap(100, 100, 100))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(kalkisHavaLimanıCombo)
-                                .addGap(250, 250, 250)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(pilotCombo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(kalkisHavaLimanıLabel, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addGap(18, 18, 18)
-                                    .addComponent(pilotLabel))
-                                .addComponent(ucusEkleTarih, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addComponent(hostesCombo)
-                                    .addGap(115, 115, 115))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(inisHavalimanıCombo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(inisHavaLimanıCombo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(hostesCOmbo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addComponent(saatText, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(70, 70, 70)))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(tarihLabel)
-                        .addGap(129, 129, 129)
-                        .addComponent(tarihLanbel)
-                        .addGap(118, 118, 118))))
+                .addGap(143, 143, 143)
+                .addComponent(ucusEkleLabel))
             .addGroup(layout.createSequentialGroup()
-                .addGap(195, 195, 195)
+                .addGap(73, 73, 73)
+                .addComponent(ucakIdLabel)
+                .addGap(190, 190, 190)
+                .addComponent(seferIdLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addComponent(ucakIdCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(105, 105, 105)
+                .addComponent(seferIdText, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(122, 122, 122)
+                .addComponent(pilotLabel)
+                .addGap(171, 171, 171)
+                .addComponent(hostesLabel))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(pilotCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(91, 91, 91)
+                .addComponent(hostesCombo, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addComponent(tarihLabel))
+                    .addComponent(ucusEkleTarih, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(78, 78, 78)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(tarihLanbel, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(saatText, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(78, 78, 78)
+                .addComponent(ucakLabel)
+                .addGap(100, 100, 100)
+                .addComponent(buisnessFiyatLabel)
+                .addGap(59, 59, 59)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(51, 51, 51)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
-                .addComponent(ucusEkleButton)
-                .addGap(100, 100, 100))
+                .addGap(110, 110, 110)
+                .addComponent(buisnessFiyatText, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(87, 87, 87)
+                .addComponent(ekonomikFiyatText, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(304, 304, 304)
+                .addComponent(ucusEkleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -133,40 +153,71 @@ public class UcusEklemeGUI extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addComponent(ucusEkleLabel)
                 .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(kalkisHavaLimanıCombo)
-                    .addComponent(inisHavalimanıCombo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inisHavaLimanıCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(kalkisHavaLimanıLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ucakIdLabel)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(seferIdLabel)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ucakIdCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(seferIdText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(41, 41, 41)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pilotLabel)
-                    .addComponent(hostesCombo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(hostesLabel)))
+                .addGap(3, 3, 3)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pilotCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(hostesCOmbo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tarihLabel)
-                    .addComponent(tarihLanbel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ucusEkleTarih, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(saatText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addComponent(ucakLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(hostesCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(tarihLabel)
+                        .addGap(0, 0, 0)
+                        .addComponent(ucusEkleTarih, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(tarihLanbel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(saatText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ucakLabel)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(buisnessFiyatLabel)
+                            .addComponent(jLabel2))))
+                .addGap(3, 3, 3)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ucusEkleButton))
-                .addGap(25, 25, 25))
+                    .addComponent(buisnessFiyatText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ekonomikFiyatText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addComponent(ucusEkleButton))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ucusEkleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ucusEkleButtonActionPerformed
+        // TODO add your handling code here:
+        int ucakId = (Integer)ucakIdCombo.getSelectedItem();
+      
+        int pilotId = (Integer)pilotCombo.getSelectedItem();
+        int hostesId = (Integer)hostesCombo.getSelectedItem();
+        String tarih = ucusEkleTarih.getText();
+        String saat = saatText.getText();
+        int buisnessFiyat = Integer.parseInt(buisnessFiyatText.getText());
+        int ekomoikFiyat = Integer.parseInt(ekonomikFiyatText.getText());
+        int seferId = Integer.parseInt(seferIdText.getText());
+        register.ucusOlusturBaslat(ucakId, seferId, pilotId,hostesId,tarih,saat,buisnessFiyat,ekomoikFiyat);
+        
+    }//GEN-LAST:event_ucusEkleButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -205,18 +256,22 @@ public class UcusEklemeGUI extends javax.swing.JFrame {
      
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox hostesCOmbo;
-    private javax.swing.JLabel hostesCombo;
-    private javax.swing.JComboBox inisHavaLimanıCombo;
-    private javax.swing.JLabel inisHavalimanıCombo;
+    private javax.swing.JLabel buisnessFiyatLabel;
+    private javax.swing.JTextField buisnessFiyatText;
+    private javax.swing.JTextField ekonomikFiyatText;
+    private javax.swing.JComboBox hostesCombo;
+    private javax.swing.JLabel hostesLabel;
     private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JLabel kalkisHavaLimanıCombo;
-    private javax.swing.JComboBox kalkisHavaLimanıLabel;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JComboBox pilotCombo;
     private javax.swing.JLabel pilotLabel;
     private javax.swing.JTextField saatText;
+    private javax.swing.JLabel seferIdLabel;
+    private javax.swing.JTextField seferIdText;
     private javax.swing.JLabel tarihLabel;
     private javax.swing.JLabel tarihLanbel;
+    private javax.swing.JComboBox ucakIdCombo;
+    private javax.swing.JLabel ucakIdLabel;
     private javax.swing.JLabel ucakLabel;
     private javax.swing.JButton ucusEkleButton;
     private javax.swing.JLabel ucusEkleLabel;

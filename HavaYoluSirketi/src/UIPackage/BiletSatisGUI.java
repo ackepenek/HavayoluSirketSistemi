@@ -37,27 +37,35 @@ public class BiletSatisGUI extends javax.swing.JPanel {
         tarihLabel = new javax.swing.JLabel();
         seferSorgulaButton = new javax.swing.JButton();
 
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setLayout(null);
 
-        add(baslangicCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 106, 105, -1));
+        add(baslangicCombo);
+        baslangicCombo.setBounds(12, 106, 105, 27);
 
-        add(bitisCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 106, 96, -1));
-        add(tarihText, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 106, 127, -1));
+        add(bitisCombo);
+        bitisCombo.setBounds(123, 106, 96, 27);
+        add(tarihText);
+        tarihText.setBounds(237, 106, 127, 27);
 
         biletLabel.setText("Başlangıç, Bitiş ve Tarih Bilgilerini Giriniz");
-        add(biletLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 29, -1, -1));
+        add(biletLabel);
+        biletLabel.setBounds(83, 29, 253, 17);
 
         başlangıçLabel.setText("Başlangıç");
-        add(başlangıçLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 86, -1, -1));
+        add(başlangıçLabel);
+        başlangıçLabel.setBounds(27, 86, 61, 17);
 
         bitisLabel.setText("Bitiş");
-        add(bitisLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 86, 38, -1));
+        add(bitisLabel);
+        bitisLabel.setBounds(151, 86, 38, 17);
 
         tarihLabel.setText("Tarih");
-        add(tarihLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 86, -1, -1));
+        add(tarihLabel);
+        tarihLabel.setBounds(280, 86, 31, 17);
 
         seferSorgulaButton.setText("Sorgula");
-        add(seferSorgulaButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(303, 189, -1, -1));
+        add(seferSorgulaButton);
+        seferSorgulaButton.setBounds(264, 189, 100, 29);
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox baslangicCombo;
