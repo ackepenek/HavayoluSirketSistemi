@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import TechnicalServices.AbstractDBMapper;
 import TechnicalServices.IMapper;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -40,10 +42,32 @@ public class SeferMapper extends AbstractDBMapper {
 
     @Override
     protected String buildObjectUpdateQuery(Object object) {
-        Sefer sefer = (Sefer)object;
-        String query="insert into sefer values(NULL," + 
-                "'" + sefer.getKalkisHavalimani().getHavaLimaniId() + "'," +
-                "'" + sefer.getInisHavalimani().getHavaLimaniId() + "')" ;
+        Sefer sefer = (Sefer) object;
+        String query = "insert into sefer values(NULL,"
+                + "'" + sefer.getKalkisHavalimani().getHavaLimaniId() + "',"
+                + "'" + sefer.getInisHavalimani().getHavaLimaniId() + "')";
         return query;
+    }
+
+    @Override
+    protected List<Object> getAllObjectsFromResult(ResultSet rs) {
+        List<Object> seferList = new ArrayList<Object>();
+        try {
+            while (rs.next()) {
+                Sefer sefer = new Sefer();
+                sefer.setSeferID(Integer.parseInt(rs.getString(1)));
+
+                HavaLimani kalkis = (HavaLimani) new HavaLimaniMapper("havalimani").get(Integer.parseInt(rs.getString(2)));
+                sefer.setKalkisHavalimani(kalkis);
+
+                HavaLimani inis = (HavaLimani) new HavaLimaniMapper("havalimani").get(Integer.parseInt(rs.getString(3)));
+                sefer.setInisHavalimani(inis);
+                
+                seferList.add(sefer);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(SeferMapper.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return seferList;
     }
 }

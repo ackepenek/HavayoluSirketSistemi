@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 
 import TechnicalServices.AbstractDBMapper;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -43,5 +44,10 @@ public class PilotMapper extends AbstractDBMapper {
                 ")";
         
         return query;
+    }
+
+    @Override
+    protected List<Object> getAllObjectsFromResult(ResultSet rs) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

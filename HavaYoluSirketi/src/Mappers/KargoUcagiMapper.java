@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 
 import TechnicalServices.AbstractDBMapper;
 import TechnicalServices.IMapper;
+import java.util.List;
 
 
 public class KargoUcagiMapper extends AbstractDBMapper{
@@ -24,6 +25,11 @@ public class KargoUcagiMapper extends AbstractDBMapper{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+    @Override
+    protected List<Object> getAllObjectsFromResult(ResultSet rs) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 	
 
 }

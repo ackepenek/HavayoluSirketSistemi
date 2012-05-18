@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import org.w3c.dom.views.AbstractView;
 
 import TechnicalServices.*;
+import java.util.List;
 
 public class BiletMapper extends AbstractDBMapper{
 
@@ -24,6 +25,11 @@ public class BiletMapper extends AbstractDBMapper{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+    @Override
+    protected List<Object> getAllObjectsFromResult(ResultSet rs) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 
 
 }

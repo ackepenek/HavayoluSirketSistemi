@@ -2,6 +2,7 @@ package TechnicalServices;
 
 import DomainPackage.*;
 import Mappers.*;
+import java.util.List;
 
 public class Facade {
 	private static Facade facade;
@@ -23,6 +24,11 @@ public class Facade {
 		return mapper.put(object);
 	}
 	
+        public List<Object> getAll(Class objectClass){
+            IMapper mapper = findMapper(objectClass);
+            return mapper.getAll();
+        }
+        
 	private IMapper findMapper(Class objectClass){
 		if (objectClass == Bilet.class){
 			return new BiletMapper("bilet");
